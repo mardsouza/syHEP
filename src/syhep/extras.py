@@ -12,12 +12,12 @@ from typing import Union, List, Dict, Any, Tuple
 from sympy.combinatorics.permutations import Permutation
 import sympy as sy
 
-from heppy import *
+from syhep import *
 
 # Type aliases for clarity
 SpinorHelicity = Union[int, float]
 Mediator = Any  # Mediator particle object
-Momentum = Any  # Four-momentum object from heppy
+Momentum = Any  # Four-momentum object from syhep
 SymbolicMatrix = sy.Matrix
 SymbolicExpression = sy.Expr
 

@@ -4,7 +4,7 @@
 # pyright: reportReturnType=false
 
 """
-High Energy Physics Symbolic Computation Module
+Symbolic calculations for High Energy Particle physics using Python and Sympy
 
 This module provides symbolic computations for particle physics calculations
 including gamma matrices, spinors, polarization vectors, and scattering amplitudes.
