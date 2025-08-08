@@ -558,6 +558,10 @@ def Amplitude_schannel(u1: str, p1: Momentum, u2: str, p2: Momentum, prp: str,
         dmsm = r"\chi" if dm else r"\psi"
 
         s, Mmed, Gamma = sy.symbols(r's M_{med} Gamma', real=True, positive=True)
+        # gs: scalar coupling
+        # gps: pseudo-scalar coupling
+        # gv: vector coupling
+        # gav: axial-vector coupling
         gs, gps = sy.symbols(f'g_s{dmsm} g_ps{dmsm}', real=True, positive=True)
         gv, gav = sy.symbols(f'g_v{dmsm} g_av{dmsm}', real=True, positive=True)
 
@@ -666,9 +670,9 @@ def decay_Gamma(prp: str, u3: str, p3: Momentum, u4: str, p4: Momentum) -> List[
         # pick the correct indice for SM or DM mechanics
         dmsm = r"\chi" if dm else r"\psi"
 
-        s, Mmed, Gamma = sy.symbols(r's M_{med} Gamma', real=True)
-        gs, gps = sy.symbols(f'g_s{dmsm} g_ps{dmsm}', real=True)
-        gv, gav = sy.symbols(f'g_v{dmsm} g_av{dmsm}', real=True)
+        s, Mmed, Gamma = sy.symbols(r's M_{med} Gamma', real=True, positive=True)
+        gs, gps = sy.symbols(f'g_s{dmsm} g_ps{dmsm}', real=True, positive=True)
+        gv, gav = sy.symbols(f'g_v{dmsm} g_av{dmsm}', real=True, positive=True)
 
         denom = (s - Mmed**2 + sy.I * (Mmed * Gamma))
 
